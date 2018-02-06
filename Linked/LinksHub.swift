@@ -42,6 +42,8 @@ class LinksHub: UIViewController {
 
     @IBOutlet weak var InputAnimator: InputAnimationView!
     
+    @IBOutlet weak var VolumeAnimator: VolumeAnimationView!
+    
     /*Similar to a toggle, if a view you want to display is already being displayed removes the view.
      if a view was already being displayed then removes views and then adds the new view*/
     //Ex.  Menu view is being shown, if menu button is clicked again, then it hides the menu view
@@ -104,7 +106,19 @@ class LinksHub: UIViewController {
                     self.disHideButtons() //show the buttons from the view containing main buttons -> Menu, Camera, Input, Volume
                 }
                 break
-
+            case "Volume":
+                changeBackground(imageName: "")  //remove the background image
+                VolumeAnimator.isHidden = false  //show animation view
+                VolumeAnimator.addVolumeAnimationReversedAnimation()//animate
+                self.viewHandler.removeView(viewToRemove: viewControllerToDisplay!, animate: false) //remove view that contains buttons
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.4) { //wait n secs ->n is number of secs that the animation lasts
+                    self.changeBackground(imageName: "")  //remove the background image
+                    self.VolumeAnimator.isHidden = true //hide view for animation
+                    self.disHideButtons() //show the buttons from the view containing main buttons -> Menu, Camera, Input, Volume
+                }
+                break
+                
                 
             default: break
             }
@@ -133,6 +147,12 @@ class LinksHub: UIViewController {
                 InputAnimator.addInputAnimation() //animate
                 self.changeBackground(imageName: viewControllerToDisplay!.title! + "_afterAnimation.jpg") // puts the background image after animating
                 break
+            case "Volume":
+                hideButtonsExcept(buttonExcluded: sender) //hide the buttons that are not the one that was clicked
+                VolumeAnimator.isHidden = false //show the view of the animation
+                VolumeAnimator.addVolumeAnimation() //animate
+                self.changeBackground(imageName: viewControllerToDisplay!.title! + "_afterAnimation.jpg") // puts the background image after animating
+                break
                 
             default: break
             }
@@ -148,6 +168,7 @@ class LinksHub: UIViewController {
             self.CameraAnimator.isHidden = true // hide animation after it is done
             self.MenuAnimator.isHidden = true
             self.InputAnimator.isHidden = true
+            self.VolumeAnimator.isHidden = true
             }
         }
             showButtons()

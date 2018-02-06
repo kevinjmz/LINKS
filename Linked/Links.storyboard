@@ -79,7 +79,7 @@
                                 <accessibility key="accessibilityConfiguration" label="Anim_camera"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5S-BT-2HL" customClass="Button" customModule="Linked">
-                                <rect key="frame" x="245" y="662" width="72" height="72"/>
+                                <rect key="frame" x="239" y="656" width="76" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Volume" backgroundImage="Hub_Volume"/>
                                 <userDefinedRuntimeAttributes>
@@ -93,6 +93,11 @@
                                     <action selector="displayContainer:" destination="N5E-vl-X75" eventType="touchUpInside" id="Fkk-FO-PQC"/>
                                 </connections>
                             </button>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gBA-Pc-ANV" userLabel="Volume Animator" customClass="VolumeAnimationView" customModule="Linked" customModuleProvider="target">
+                                <rect key="frame" x="-2" y="-2" width="1027" height="772"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jhu-87-ehc" customClass="Button" customModule="Linked">
                                 <rect key="frame" x="200" y="569" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -221,6 +226,7 @@
                         <outlet property="CameraAnimator" destination="Lhy-nN-Ixm" id="8Kx-ka-dV2"/>
                         <outlet property="InputAnimator" destination="ZV5-Pi-ykY" id="N0E-9T-d3n"/>
                         <outlet property="MenuAnimator" destination="Y0n-QF-LZy" id="cqS-FJ-sJj"/>
+                        <outlet property="VolumeAnimator" destination="gBA-Pc-ANV" id="Tj6-HN-PBc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rOo-j8-Ylo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -927,7 +933,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s5f-Nb-tME" customClass="Button" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="84" y="-28" width="199" height="133"/>
+                                <rect key="frame" x="90" y="-14" width="199" height="133"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Volume up" image="VolumeUp"/>
                                 <userDefinedRuntimeAttributes>
@@ -940,7 +946,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXz-Xf-UTp" customClass="Button" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="84" y="159" width="223" height="133"/>
+                                <rect key="frame" x="90" y="200" width="223" height="133"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Volume down" image="VolumeDown"/>
                                 <userDefinedRuntimeAttributes>
@@ -953,7 +959,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPF-zV-cDJ" customClass="Button" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="384" y="79" width="256" height="113"/>
+                                <rect key="frame" x="228" y="328" width="256" height="113"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Mute microphone" image="Mic"/>
                                 <userDefinedRuntimeAttributes>
