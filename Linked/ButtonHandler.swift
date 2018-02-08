@@ -41,14 +41,27 @@ class ButtonHandler: NSObject  {
     }
     
     
+    @IBOutlet weak var CameraPreset: Button!
+
+    @IBOutlet weak var SourcePC: Button!
+    
     @IBOutlet weak var ClassroomMode: Button!
     
     @IBOutlet weak var VCMode: Button!
     
     @IBAction public func classroomModeTapped (_ sender: Button){
-        print ("CM tapped")
+        VCMode.isEnabled = true
+        ClassroomMode.isEnabled = false
+        SourcePC.isEnabled = false
+        CameraPreset.isEnabled = false
     }
     
+    @IBAction public func VCModeTapped (_ sender:Button){
+        VCMode.isEnabled = false
+        ClassroomMode.isEnabled = true
+        SourcePC.isEnabled = true
+        CameraPreset.isEnabled = true
+    }
     
     /**Sends waci command with given string*/
     func sendWaciCommand(waciCommand: String) {
@@ -86,5 +99,4 @@ class ButtonHandler: NSObject  {
             button.isHidden = hide
         }
     }
-    
 }

@@ -72,6 +72,23 @@
                                     <action selector="displayContainer:" destination="N5E-vl-X75" eventType="touchUpInside" id="XJ0-8I-Ewg"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOX-Hp-EBp" customClass="Button" customModule="Linked">
+                                <rect key="frame" x="93" y="581" width="53" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="viewToDisplay" value="Camera"/>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="view">
+                                        <point key="value" x="570" y="300"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Camera_min"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="displayContainer:" destination="N5E-vl-X75" eventType="touchUpInside" id="QdM-5a-EB5"/>
+                                </connections>
+                            </button>
                             <view hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" restorationIdentifier="AnimationCamera" translatesAutoresizingMaskIntoConstraints="NO" id="Lhy-nN-Ixm" customClass="AnimationCameraView" customModule="Linked" customModuleProvider="target">
                                 <rect key="frame" x="-58" y="-66" width="1113" height="877"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -91,6 +108,20 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="displayContainer:" destination="N5E-vl-X75" eventType="touchUpInside" id="Fkk-FO-PQC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dux-0a-CJK" customClass="Button" customModule="Linked">
+                                <rect key="frame" x="137" y="706" width="53" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="viewToDisplay" value="Volume"/>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="view">
+                                        <point key="value" x="700" y="330"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Volume_min"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="displayContainer:" destination="N5E-vl-X75" eventType="touchUpInside" id="c0G-Xw-eKY"/>
                                 </connections>
                             </button>
                             <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gBA-Pc-ANV" userLabel="Volume Animator" customClass="VolumeAnimationView" customModule="Linked" customModuleProvider="target">
@@ -116,6 +147,28 @@
                                     <action selector="displayContainer:" destination="N5E-vl-X75" eventType="touchUpInside" id="x8C-ow-dTc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFt-r5-S6m" customClass="Button" customModule="Linked">
+                                <rect key="frame" x="134" y="632" width="53" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="viewToDisplay" value="Input"/>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="view">
+                                        <point key="value" x="650" y="400"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Input_min"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftUp">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="displayContainer:" destination="N5E-vl-X75" eventType="touchUpInside" id="fBi-O9-Fsw"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZV5-Pi-ykY" customClass="InputAnimationView" customModule="Linked" customModuleProvider="target">
+                                <rect key="frame" x="2" y="-2" width="1027" height="772"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="Input" translatesAutoresizingMaskIntoConstraints="NO" id="cfq-aX-dSJ">
                                 <rect key="frame" x="672" y="727" width="652" height="768"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -164,6 +217,26 @@
                                     <action selector="displayContainer:" destination="N5E-vl-X75" eventType="touchUpInside" id="SOC-ht-nDv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAn-p1-aj9" customClass="Button" customModule="Linked">
+                                <rect key="frame" x="16" y="565" width="53" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="viewToDisplay" value="Menu"/>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="view">
+                                        <point key="value" x="647" y="350"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Menu_min"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="displayContainer:" destination="N5E-vl-X75" eventType="touchUpInside" id="qWs-PV-2M1"/>
+                                </connections>
+                            </button>
                             <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y0n-QF-LZy" customClass="AnimationMenuView" customModule="Linked" customModuleProvider="target">
                                 <rect key="frame" x="-1" y="-1" width="1029" height="772"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -178,6 +251,7 @@
                                     <userDefinedRuntimeAttribute type="point" keyPath="view">
                                         <point key="value" x="650" y="300"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Power_btn"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="displayContainer:" destination="N5E-vl-X75" eventType="touchUpInside" id="nXQ-PX-7DD"/>
@@ -214,11 +288,6 @@
                                     <segue destination="x0Q-fi-8Kj" kind="embed" id="sqW-hs-RST"/>
                                 </connections>
                             </containerView>
-                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZV5-Pi-ykY" customClass="InputAnimationView" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="2" y="-2" width="1027" height="772"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -388,6 +457,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="VCModeTapped:" destination="HOY-he-I80" eventType="touchUpInside" id="Ndq-Qp-zrA"/>
                                     <action selector="sendWaciCommand:" destination="HOY-he-I80" eventType="touchUpInside" id="lJ2-az-29V"/>
                                 </connections>
                             </button>
@@ -412,8 +482,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ayN-sl-b5F" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="HOY-he-I80" customClass="ButtonHandler" customModule="Linked" customModuleProvider="target">
                     <connections>
+                        <outlet property="CameraPreset" destination="aPP-pe-Fx1" id="g4T-Co-h7l"/>
                         <outlet property="ClassroomMode" destination="ZhY-ba-5Fk" id="9wn-TN-r1B"/>
-                        <outlet property="VCMode" destination="3HL-sW-jfM" id="HKj-JX-hj4"/>
+                        <outlet property="SourcePC" destination="od4-Td-2rc" id="JOd-lE-RgF"/>
+                        <outlet property="VCMode" destination="3HL-sW-jfM" id="f8x-nw-0F5"/>
                         <outletCollection property="selectableButtons" destination="h7J-Mw-nlg" collectionClass="NSMutableArray" id="YP8-zt-CPv"/>
                         <outletCollection property="selectableButtons" destination="vdG-Tp-mB2" collectionClass="NSMutableArray" id="zUB-aN-zJV"/>
                         <outletCollection property="selectableButtons" destination="I0a-3t-ZbV" collectionClass="NSMutableArray" id="kL4-Vi-ZdD"/>
