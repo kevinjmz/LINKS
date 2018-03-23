@@ -20,7 +20,7 @@ public class ViewHandler {
     
     init(){
     }
-    
+
     /**Removes all child views from being shown.
      No subviews will be displayed after this is invoked
      @param childViewControllers are the all */

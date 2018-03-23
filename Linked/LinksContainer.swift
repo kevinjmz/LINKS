@@ -2,7 +2,7 @@
 //  LinksContainer.swift
 //  Linked
 //
-//  Created by Gerardo Cervantes on 4/21/17.
+//  Created by Gerardo Cervantes and Kevin Jimenez on 4/21/17 - 03/23/2018.
 //  Copyright © 2017 Gerardo Cervantes. All rights reserved.
 //
 

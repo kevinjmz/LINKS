@@ -40,9 +40,11 @@ class LinksHub: UIViewController {
     
     @IBOutlet weak var MenuAnimator: AnimationMenuView!
 
-    @IBOutlet weak var InputAnimator: InputAnimationView!
+    @IBOutlet weak var InputAnimator: InputAnimation2View!
     
     @IBOutlet weak var VolumeAnimator: VolumeAnimationView!
+
+    @IBOutlet weak var PowerAnimator: PowerAnimationView!
     
     /*Similar to a toggle, if a view you want to display is already being displayed removes the view.
      if a view was already being displayed then removes views and then adds the new view*/
@@ -72,7 +74,7 @@ class LinksHub: UIViewController {
             case "Camera","Camera_min":
                 changeBackground(imageName: "")  //remove the background image
                 CameraAnimator.isHidden = false  //show animation view
-                CameraAnimator.addCameraAnimationReversed2Animation()//animate
+                CameraAnimator.addCameraAnimationReversedAnimation()//animate
                 self.viewHandler.removeView(viewToRemove: viewControllerToDisplay!, animate: false)
                 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2) { //wait n secs ->n is number of secs that the animation lasts
@@ -96,7 +98,7 @@ class LinksHub: UIViewController {
             case "Input", "Input_min":
                 changeBackground(imageName: "")  //remove the background image
                 InputAnimator.isHidden = false  //show animation view
-                InputAnimator.addInputAnimationReversedAnimation()//animate
+                InputAnimator.addInputAnimation2ReversedAnimation()//animate
                 self.viewHandler.removeView(viewToRemove: viewControllerToDisplay!, animate: false) //remove view that contains buttons
                 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) { //wait n secs ->n is number of secs that the animation lasts
@@ -118,6 +120,18 @@ class LinksHub: UIViewController {
                 }
                 break
                 
+            case "Power":
+                changeBackground(imageName: "")  //remove the background image
+                PowerAnimator.isHidden = false  //show animation view
+                PowerAnimator.addPowerAnimationReversedAnimation()//animate
+                self.viewHandler.removeView(viewToRemove: viewControllerToDisplay!, animate: false) //remove view that contains buttons
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.1) { //wait n secs ->n is number of secs that the animation lasts
+                    self.changeBackground(imageName: "")  //remove the background image
+                    self.PowerAnimator.isHidden = true //hide view for animation
+                    self.disHideButtons() //show the buttons from the view containing main buttons -> Menu, Camera, Input, Volume
+                }
+                break
                 
             default: break
             }
@@ -143,13 +157,19 @@ class LinksHub: UIViewController {
             case "Input","Input_min":
                 hideButtonsExcept(buttonExcluded: sender) //hide the buttons that are not the one that was clicked
                 InputAnimator.isHidden = false //show the view of the animation
-                InputAnimator.addInputAnimation() //animate
+                InputAnimator.addInputAnimation2Animation() //animate
                 self.changeBackground(imageName: viewControllerToDisplay!.title! + "_afterAnimation.jpg") // puts the background image after animating
                 break
             case "Volume","Volume_min":
                 hideButtonsExcept(buttonExcluded: sender) //hide the buttons that are not the one that was clicked
                 VolumeAnimator.isHidden = false //show the view of the animation
                 VolumeAnimator.addVolumeAnimation() //animate
+                self.changeBackground(imageName: viewControllerToDisplay!.title! + "_afterAnimation.jpg") // puts the background image after animating
+                break
+            case "Power":
+                hideButtonsExcept(buttonExcluded: sender)
+                PowerAnimator.isHidden = false //show the view of the animation
+                PowerAnimator.addPowerAnimation() //animate
                 self.changeBackground(imageName: viewControllerToDisplay!.title! + "_afterAnimation.jpg") // puts the background image after animating
                 break
                 
@@ -168,6 +188,7 @@ class LinksHub: UIViewController {
             self.MenuAnimator.isHidden = true
             self.InputAnimator.isHidden = true
             self.VolumeAnimator.isHidden = true
+            self.PowerAnimator.isHidden = true
             }
         }
             showButtons()
@@ -278,9 +299,6 @@ class LinksHub: UIViewController {
             if subview is Button {
                 let button = subview as! Button
                 
-                if(button.buttonLabel == buttonExcluded.buttonLabel+"_min"){
-                    button.isHidden = true
-                }
                 if(button.buttonLabel.contains("_min")){
                     let bigButton = buttonExcluded.buttonLabel.components(separatedBy: "_min")[0]
                     for subview in view.subviews{
@@ -297,7 +315,7 @@ class LinksHub: UIViewController {
                     button.buttonLabel != "Home_btn" &&
                     button.buttonLabel != "Phone_btn" &&
                     button.buttonLabel != "Help_btn" &&
-                    button.buttonLabel != "Power_btn" &&
+                    button.buttonLabel != "Power" &&
                     button.viewToDisplay != "Camera_min" &&
                     button.buttonLabel != "Menu_min" &&
                     button.buttonLabel != "Camera_min" &&
@@ -306,6 +324,7 @@ class LinksHub: UIViewController {
                     ){
                     button.isHidden = true
                 }
+                
             }
         }
     }

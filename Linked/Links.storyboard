@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,7 +24,10 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6w-Or-bvO" customClass="Button" customModule="Linked" customModuleProvider="target">
                                 <rect key="frame" x="14" y="593" width="164" height="164"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Start" backgroundImage="Power_Icon_0000"/>
+                                <state key="normal" title="ON" backgroundImage="Power_Icon_0000"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="System_ON"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="kIP-2W-SX9" eventType="touchUpInside" id="vWw-ay-bCg"/>
                                     <action selector="startButtonTapped:" destination="f5x-eL-54d" eventType="touchUpInside" id="559-V0-3lP"/>
@@ -73,7 +77,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOX-Hp-EBp" customClass="Button" customModule="Linked">
-                                <rect key="frame" x="93" y="581" width="53" height="53"/>
+                                <rect key="frame" x="95" y="583" width="53" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -90,7 +94,7 @@
                                 </connections>
                             </button>
                             <view hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" restorationIdentifier="AnimationCamera" translatesAutoresizingMaskIntoConstraints="NO" id="Lhy-nN-Ixm" customClass="AnimationCameraView" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="-58" y="-66" width="1113" height="877"/>
+                                <rect key="frame" x="0.0" y="-2" width="1027" height="772"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" label="Anim_camera"/>
@@ -111,8 +115,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dux-0a-CJK" customClass="Button" customModule="Linked">
-                                <rect key="frame" x="137" y="706" width="53" height="53"/>
+                                <rect key="frame" x="138" y="706" width="53" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="viewToDisplay" value="Volume"/>
                                     <userDefinedRuntimeAttribute type="point" keyPath="view">
@@ -125,12 +132,12 @@
                                 </connections>
                             </button>
                             <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gBA-Pc-ANV" userLabel="Volume Animator" customClass="VolumeAnimationView" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="-2" y="-2" width="1027" height="772"/>
+                                <rect key="frame" x="0.0" y="-2" width="1027" height="772"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jhu-87-ehc" customClass="Button" customModule="Linked">
-                                <rect key="frame" x="200" y="569" width="80" height="80"/>
+                                <rect key="frame" x="202" y="566" width="76" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Input" backgroundImage="Hub_Display"/>
                                 <userDefinedRuntimeAttributes>
@@ -147,8 +154,13 @@
                                     <action selector="displayContainer:" destination="N5E-vl-X75" eventType="touchUpInside" id="x8C-ow-dTc"/>
                                 </connections>
                             </button>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4b3-Tm-Ayd" userLabel="Power Animator" customClass="PowerAnimationView" customModule="Linked" customModuleProvider="target">
+                                <rect key="frame" x="-2" y="-2" width="1027" height="772"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFt-r5-S6m" customClass="Button" customModule="Linked">
-                                <rect key="frame" x="134" y="632" width="53" height="53"/>
+                                <rect key="frame" x="135" y="644" width="53" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="viewToDisplay" value="Input"/>
@@ -156,16 +168,13 @@
                                         <point key="value" x="650" y="400"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Input_min"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftUp">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="displayContainer:" destination="N5E-vl-X75" eventType="touchUpInside" id="fBi-O9-Fsw"/>
                                 </connections>
                             </button>
-                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZV5-Pi-ykY" customClass="InputAnimationView" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="2" y="-2" width="1027" height="772"/>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZV5-Pi-ykY" customClass="InputAnimation2View" customModule="Linked" customModuleProvider="target">
+                                <rect key="frame" x="7" y="-14" width="1025" height="770"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -179,9 +188,6 @@
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="Numpad" translatesAutoresizingMaskIntoConstraints="NO" id="DQe-En-orX">
                                 <rect key="frame" x="796" y="667" width="649" height="676"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <segue destination="ca5-lv-NQO" kind="embed" id="t07-Vf-ujB"/>
-                                </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="Volume" translatesAutoresizingMaskIntoConstraints="NO" id="XD6-Vq-xSC">
                                 <rect key="frame" x="192" y="-209" width="652" height="284"/>
@@ -218,7 +224,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAn-p1-aj9" customClass="Button" customModule="Linked">
-                                <rect key="frame" x="16" y="565" width="53" height="53"/>
+                                <rect key="frame" x="8" y="565" width="53" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -251,7 +257,7 @@
                                     <userDefinedRuntimeAttribute type="point" keyPath="view">
                                         <point key="value" x="650" y="300"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Power_btn"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Power"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="displayContainer:" destination="N5E-vl-X75" eventType="touchUpInside" id="nXQ-PX-7DD"/>
@@ -269,8 +275,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="Help"/>
-                                <state key="normal" title="Button" backgroundImage="Hub_info">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Labels" backgroundImage="Hub_info">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Help_btn"/>
@@ -295,13 +301,14 @@
                         <outlet property="CameraAnimator" destination="Lhy-nN-Ixm" id="8Kx-ka-dV2"/>
                         <outlet property="InputAnimator" destination="ZV5-Pi-ykY" id="N0E-9T-d3n"/>
                         <outlet property="MenuAnimator" destination="Y0n-QF-LZy" id="cqS-FJ-sJj"/>
+                        <outlet property="PowerAnimator" destination="4b3-Tm-Ayd" id="MNR-dy-Trk"/>
                         <outlet property="VolumeAnimator" destination="gBA-Pc-ANV" id="Tj6-HN-PBc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rOo-j8-Ylo" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="8NX-8G-yjG" customClass="ButtonAnimations" customModule="Linked" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="-4648.4626647144942" y="-1631.8359375"/>
+            <point key="canvasLocation" x="-4648.828125" y="-1632.03125"/>
         </scene>
         <!--Input-->
         <scene sceneID="UTl-ic-J2K">
@@ -316,7 +323,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7J-Mw-nlg" customClass="Button" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="-26" y="275" width="114" height="114"/>
+                                <rect key="frame" x="111" y="235" width="114" height="114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Left Projector" backgroundImage="left_projector">
                                     <color key="titleShadowColor" red="0.25600946130000002" green="0.2420130818" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -329,11 +336,12 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="LeftProjectorTapped:" destination="HOY-he-I80" eventType="touchUpInside" id="WNf-BT-qb6"/>
                                     <action selector="changeSelectState:" destination="HOY-he-I80" eventType="touchUpInside" id="Rcf-Ue-KFv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdG-Tp-mB2" customClass="Button" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="188" y="222" width="114" height="114"/>
+                                <rect key="frame" x="294" y="243" width="114" height="114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Right Projector" backgroundImage="right_projector">
                                     <color key="titleShadowColor" red="0.25600946130000002" green="0.2420130818" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -343,53 +351,82 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Right Projector"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="RightProjectorTapped:" destination="HOY-he-I80" eventType="touchUpInside" id="W7e-4a-kGL"/>
                                     <action selector="changeSelectState:" destination="HOY-he-I80" eventType="touchUpInside" id="yJI-jx-Fy8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0a-3t-ZbV" customClass="Button" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="393" y="278" width="114" height="114"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7aM-tN-MJY" customClass="Button" customModule="Linked" customModuleProvider="target">
+                                <rect key="frame" x="294" y="378" width="114" height="114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Apple TV" backgroundImage="apple_tv">
                                     <color key="titleShadowColor" red="0.25600946130000002" green="0.2420130818" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="3"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_AppleTvRight"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Apple TV"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="changeSelectState:" destination="HOY-he-I80" eventType="touchUpInside" id="g5o-g6-AYI"/>
+                                    <action selector="changeSelectState:" destination="HOY-he-I80" eventType="touchUpInside" id="gwi-Ko-rZg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSj-Nn-fIS" customClass="Button" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="104" y="434" width="114" height="114"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSj-Nn-fIS" customClass="Button" customModule="Linked" customModuleProvider="target">
+                                <rect key="frame" x="-11" y="167" width="114" height="114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Main Computer" backgroundImage="main_computer">
                                     <color key="titleShadowColor" red="0.25600946130000002" green="0.2420130818" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="3"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_MainComputerLeft"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Main Computer"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="buttonSingleSelect:" destination="HOY-he-I80" eventType="touchUpInside" id="erx-G8-iGm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXR-By-nMm" customClass="Button" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="326" y="477" width="114" height="114"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPN-6z-s8E" customClass="Button" customModule="Linked" customModuleProvider="target">
+                                <rect key="frame" x="402" y="167" width="114" height="114"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Main Computer" backgroundImage="main_computer">
+                                    <color key="titleShadowColor" red="0.25600946130000002" green="0.2420130818" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_MainComputerRight"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Main Computer"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonSingleSelect:" destination="HOY-he-I80" eventType="touchUpInside" id="SwF-b7-yGJ"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXR-By-nMm" customClass="Button" customModule="Linked" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="304" width="114" height="114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Laptop" backgroundImage="laptop">
                                     <color key="titleShadowColor" red="0.25600946130000002" green="0.2420130818" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="4"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_LaptopLeft"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Laptop"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="buttonSingleSelect:" destination="HOY-he-I80" eventType="touchUpInside" id="JxS-9d-wC6"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ITe-VG-eBN" customClass="Button" customModule="Linked" customModuleProvider="target">
+                                <rect key="frame" x="416" y="304" width="114" height="114"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Laptop" backgroundImage="laptop">
+                                    <color key="titleShadowColor" red="0.25600946130000002" green="0.2420130818" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_LaptopRight"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Laptop"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonSingleSelect:" destination="HOY-he-I80" eventType="touchUpInside" id="tMx-6O-mme"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ZhY-ba-5Fk" customClass="Button" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="-11" y="57" width="114" height="114"/>
+                                <rect key="frame" x="293" y="6" width="114" height="114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Classroom Mode" backgroundImage="class">
                                     <color key="titleShadowColor" red="0.2956904541" green="0.31732728119999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -407,7 +444,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPP-pe-Fx1" customClass="Button" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="404" y="56" width="228" height="113"/>
+                                <rect key="frame" x="432" y="574" width="228" height="113"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Camera Preset" image="camera_presets">
                                     <color key="titleShadowColor" red="0.25600946130000002" green="0.2420130818" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -420,22 +457,8 @@
                                     <action selector="sendWaciCommand:" destination="HOY-he-I80" eventType="touchUpInside" id="Zuz-Jg-9tV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="od4-Td-2rc" customClass="Button" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="185" y="28" width="222" height="113"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Source PC" image="pc_presets">
-                                    <color key="titleShadowColor" red="0.2956904541" green="0.31732728119999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Source PC"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="My PC"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="sendWaciCommand:" destination="HOY-he-I80" eventType="touchUpInside" id="FT9-ZB-nHu"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="3HL-sW-jfM" customClass="Button" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="-208" y="175" width="114" height="114"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="3HL-sW-jfM" customClass="Button" customModule="Linked" customModuleProvider="target">
+                                <rect key="frame" x="34" y="6" width="114" height="114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Video Conference Mode" backgroundImage="conference">
                                     <color key="titleShadowColor" red="0.2956904541" green="0.31732728119999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -461,15 +484,32 @@
                                     <action selector="sendWaciCommand:" destination="HOY-he-I80" eventType="touchUpInside" id="lJ2-az-29V"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HsG-Yw-Lz2" customClass="Button" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="153" y="616" width="114" height="114"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="od4-Td-2rc" customClass="Button" customModule="Linked" customModuleProvider="target">
+                                <rect key="frame" x="174" y="574" width="222" height="113"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Submit" backgroundImage="apply"/>
+                                <state key="normal" title="Source PC" image="pc_presets">
+                                    <color key="titleShadowColor" red="0.2956904541" green="0.31732728119999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Apply"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Source PC"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="My PC"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="changeInputOutput:" destination="OU9-Ne-94p" eventType="touchUpInside" id="Lrn-ee-Pfb"/>
+                                    <action selector="sendWaciCommand:" destination="HOY-he-I80" eventType="touchUpInside" id="FT9-ZB-nHu"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0a-3t-ZbV" customClass="Button" customModule="Linked" customModuleProvider="target">
+                                <rect key="frame" x="111" y="378" width="114" height="114"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Apple TV" backgroundImage="apple_tv">
+                                    <color key="titleShadowColor" red="0.25600946130000002" green="0.2420130818" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_AppleTvLeft"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Apple TV"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="changeSelectState:" destination="HOY-he-I80" eventType="touchUpInside" id="g5o-g6-AYI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -482,8 +522,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ayN-sl-b5F" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="HOY-he-I80" customClass="ButtonHandler" customModule="Linked" customModuleProvider="target">
                     <connections>
+                        <outlet property="AppleTV_left" destination="I0a-3t-ZbV" id="krs-lj-zLd"/>
+                        <outlet property="AppleTV_right" destination="7aM-tN-MJY" id="QjT-BT-ai2"/>
                         <outlet property="CameraPreset" destination="aPP-pe-Fx1" id="g4T-Co-h7l"/>
                         <outlet property="ClassroomMode" destination="ZhY-ba-5Fk" id="9wn-TN-r1B"/>
+                        <outlet property="Laptop_left" destination="yXR-By-nMm" id="Ccv-VJ-xmm"/>
+                        <outlet property="Laptop_right" destination="ITe-VG-eBN" id="oOM-1p-rJZ"/>
+                        <outlet property="MainComputer_left" destination="mSj-Nn-fIS" id="VUC-3p-4uF"/>
+                        <outlet property="MainComputer_right" destination="dPN-6z-s8E" id="7fo-O5-g98"/>
                         <outlet property="SourcePC" destination="od4-Td-2rc" id="JOd-lE-RgF"/>
                         <outlet property="VCMode" destination="3HL-sW-jfM" id="f8x-nw-0F5"/>
                         <outletCollection property="selectableButtons" destination="h7J-Mw-nlg" collectionClass="NSMutableArray" id="YP8-zt-CPv"/>
@@ -494,7 +540,7 @@
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="-3625.1953124999995" y="-778.125"/>
+            <point key="canvasLocation" x="-3383" y="-1609"/>
         </scene>
         <!--Menu-->
         <scene sceneID="zBA-E6-vce">
@@ -516,7 +562,6 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Key Press F1"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value=" "/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="Gz4-sv-KE4" eventType="touchUpInside" id="EMl-fW-rmZ"/>
@@ -596,7 +641,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RqB-6A-Luj" customClass="Button" customModule="Linked" customModuleProvider="target">
                                 <rect key="frame" x="198" y="103" width="129" height="129"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Up" backgroundImage="Home_Arrows-Up">
+                                <state key="normal" title="Up" image="Home_Arrows-Up">
                                     <color key="titleShadowColor" red="0.25600946130000002" green="0.2420130818" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -700,18 +745,27 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="displayContainer:" destination="N5E-vl-X75" eventType="touchUpInside" id="ZZh-if-epd"/>
+                                    <segue destination="ca5-lv-NQO" kind="popoverPresentation" popoverAnchorView="I3X-Cx-yDR" id="Iaz-Wk-u9C">
+                                        <segue key="commit" inheritsFrom="parent" id="GV5-Tm-KgX"/>
+                                        <segue key="preview" inheritsFrom="commit" id="L0v-c2-JGU"/>
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="16z-X7-aaH" customClass="Button" customModule="Linked" customModuleProvider="target">
                                 <rect key="frame" x="-203" y="111" width="65" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="Home"/>
-                                <state key="normal" title="Home" backgroundImage="Hub_Home">
+                                <state key="normal" title="VC Menu" backgroundImage="Hub_Home">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Home_btn"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="VC Menu"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Key Press Menu"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sendWaciCommand:" destination="Gz4-sv-KE4" eventType="touchUpInside" id="Oa5-E6-qgi"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="lpd-lb-pAO" customClass="Button" customModule="Linked" customModuleProvider="target">
                                 <rect key="frame" x="691" y="523" width="85" height="85"/>
@@ -720,7 +774,7 @@
                                     <color key="titleShadowColor" red="0.2956904541" green="0.31732728119999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Key Press Layout"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Layout"/>
                                     <userDefinedRuntimeAttribute type="size" keyPath="labelSize">
                                         <size key="value" width="90" height="55"/>
                                     </userDefinedRuntimeAttribute>
@@ -756,7 +810,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XxU-8e-Rcd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="Gz4-sv-KE4" customClass="ButtonHandler" customModule="Linked" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="-4205.859375" y="-778.125"/>
+            <point key="canvasLocation" x="-4181" y="-634"/>
         </scene>
         <!--Camera-->
         <scene sceneID="eOs-e6-nyw">
@@ -847,6 +901,7 @@
                                         <size key="value" width="80" height="42"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Zoom out"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="waciCommandReleased" value="TAND_Cam Zoom Out Release"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="CMu-K0-Eg8" eventType="touchDown" id="HX4-NB-fbo"/>
@@ -863,6 +918,7 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Cam Zoom In"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Zoom in"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="waciCommandReleased" value="TAND_Cam Zoom In Release"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="CMu-K0-Eg8" eventType="touchDown" id="VOj-Fm-iFc"/>
@@ -877,12 +933,82 @@
                                 <rect key="frame" x="-221" y="-27" width="65" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="Home"/>
-                                <state key="normal" title="Home" backgroundImage="Hub_Home">
+                                <state key="normal" title="VC Menu" backgroundImage="Hub_Home">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Home_btn"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="VC  Menu"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Key Press OK"/>
                                 </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Clb-fz-HOt" customClass="Button" customModule="Linked" customModuleProvider="target">
+                                <rect key="frame" x="201" y="600" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="f2" backgroundImage="f2_icon">
+                                    <color key="titleShadowColor" red="0.2956904541" green="0.31732728119999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Key Press F2"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value=" F2"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sendWaciCommand:" destination="CMu-K0-Eg8" eventType="touchUpInside" id="RcP-rL-eef"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Msr-4h-Mnk" customClass="Button" customModule="Linked" customModuleProvider="target">
+                                <rect key="frame" x="322" y="600" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="f3" backgroundImage="f3_icon">
+                                    <color key="titleShadowColor" red="0.2956904541" green="0.31732728119999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Key Press F3"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value=" F3"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sendWaciCommand:" destination="CMu-K0-Eg8" eventType="touchUpInside" id="uLB-rG-qie"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bV8-1t-c2F" customClass="Button" customModule="Linked" customModuleProvider="target">
+                                <rect key="frame" x="446" y="600" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="f4" backgroundImage="f4_icon">
+                                    <color key="titleShadowColor" red="0.2956904541" green="0.31732728119999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Key Press F4"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value=" F4"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sendWaciCommand:" destination="CMu-K0-Eg8" eventType="touchUpInside" id="tBX-oD-JJF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mt6-CK-V3K" customClass="Button" customModule="Linked" customModuleProvider="target">
+                                <rect key="frame" x="562" y="600" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="f5" backgroundImage="f5_icon">
+                                    <color key="titleShadowColor" red="0.2956904541" green="0.31732728119999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Key Press F5"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value=" F5"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sendWaciCommand:" destination="CMu-K0-Eg8" eventType="touchUpInside" id="URS-fb-fRS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyb-oB-hbJ" customClass="Button" customModule="Linked" customModuleProvider="target">
+                                <rect key="frame" x="72" y="600" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="f1" backgroundImage="f1_icon">
+                                    <color key="titleShadowColor" red="0.2956904541" green="0.31732728119999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Key Press F1"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sendWaciCommand:" destination="CMu-K0-Eg8" eventType="touchUpInside" id="mDf-XL-tYO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -894,7 +1020,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zRb-YR-ZZB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="CMu-K0-Eg8" customClass="ButtonHandler" customModule="Linked" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="-3730.4538799414345" y="-2107.03125"/>
+            <point key="canvasLocation" x="-3691" y="-2582"/>
         </scene>
         <!--Power-->
         <scene sceneID="sBn-q0-6rM">
@@ -908,76 +1034,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="676" height="332"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXJ-Px-hQf" customClass="Button" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="92" y="19" width="146" height="124"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Power all on" image="color-blue-2"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="System_ON"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Power all on"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="sendWaciCommand:" destination="pKX-cD-FuD" eventType="touchUpInside" id="rOM-Fn-40L"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZd-aY-MIn" customClass="Button" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="426" y="19" width="146" height="124"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Power all off" image="color-blue-2"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="System_OFF"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Power all off"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="sendWaciCommand:" destination="pKX-cD-FuD" eventType="touchUpInside" id="MMK-mD-0n0"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAa-kU-Uou" customClass="Button" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="189" y="231" width="120" height="77"/>
+                                <rect key="frame" x="59" y="220" width="250" height="113"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Left Projector off" image="color-blue-2"/>
+                                <state key="normal" title="Left Projector off" image="LeftOff"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="Projector Left Off"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Left Projecter off"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Left Projector off"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="pKX-cD-FuD" eventType="touchUpInside" id="PBZ-rg-tB7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iuz-Gq-Qog" customClass="Button" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="379" y="231" width="120" height="77"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZd-aY-MIn" customClass="Button" customModule="Linked" customModuleProvider="target">
+                                <rect key="frame" x="186" y="49" width="225" height="117"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Right Projector on" image="color-blue-2"/>
+                                <state key="normal" title="System off" image="SystemOff"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="Projector Right On"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Right Projecter on"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="System_OFF"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="System Off"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="sendWaciCommand:" destination="pKX-cD-FuD" eventType="touchUpInside" id="owh-D7-ZWv"/>
+                                    <action selector="sendWaciCommand:" destination="pKX-cD-FuD" eventType="touchUpInside" id="MMK-mD-0n0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x6y-4b-2ka" customClass="Button" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="536" y="231" width="120" height="77"/>
+                                <rect key="frame" x="319" y="228" width="261" height="113"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Right Projector off" image="color-blue-2"/>
+                                <state key="normal" title="Right Projector off" image="RightOff"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="Projector Right Off"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Right Projecter off"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Right Projector off"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="pKX-cD-FuD" eventType="touchUpInside" id="vgo-OS-Poi"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dp5-sm-Vui" customClass="Button" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="20" y="231" width="120" height="77"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCQ-mE-VSL" customClass="Button" customModule="Linked" customModuleProvider="target">
+                                <rect key="frame" x="186" y="358" width="261" height="113"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Left Projector on" image="color-blue-2"/>
+                                <state key="normal" title="Both Projectors on" image="Projectors On"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="Projector Left On"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Left Projecter on"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="System_ON"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Both Projectors On"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="sendWaciCommand:" destination="pKX-cD-FuD" eventType="touchUpInside" id="Fq7-Sb-PiK"/>
+                                    <action selector="sendWaciCommand:" destination="pKX-cD-FuD" eventType="touchUpInside" id="r18-Pg-wz6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -990,7 +1092,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Md1-ES-FUq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="pKX-cD-FuD" customClass="ButtonHandler" customModule="Linked" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="-4957" y="-643"/>
+            <point key="canvasLocation" x="-4994" y="-646"/>
         </scene>
         <!--Volume-->
         <scene sceneID="ok0-2s-oBk">
@@ -1001,7 +1103,7 @@
                         <viewControllerLayoutGuide type="bottom" id="W45-y3-q4m"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="aUi-TN-bVD" customClass="TransparentView" customModule="Linked" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="652" height="284"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s5f-Nb-tME" customClass="Button" customModule="Linked" customModuleProvider="target">
@@ -1052,7 +1154,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fzA-XJ-MIE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="kI1-0G-9gF" customClass="ButtonHandler" customModule="Linked" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="-5164" y="-992"/>
+            <point key="canvasLocation" x="-5966" y="-686"/>
         </scene>
         <!--Numpad-->
         <scene sceneID="Xr7-ew-6MJ">
@@ -1063,13 +1165,13 @@
                         <viewControllerLayoutGuide type="bottom" id="x2o-mE-ukl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="w9j-h1-NB5" customClass="TransparentView" customModule="Linked" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="649" height="676"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08k-Fm-BPe" customClass="Button" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="20" y="138" width="90" height="90"/>
+                                <rect key="frame" x="20" y="137" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="7" backgroundImage="Numpad7White">
+                                <state key="normal" backgroundImage="Numpad7White">
                                     <color key="titleShadowColor" red="0.2956904541" green="0.31732728119999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -1079,10 +1181,10 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibD-Ge-coW" customClass="Button" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="20" y="492" width="90" height="90"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibD-Ge-coW" customClass="Button">
+                                <rect key="frame" x="20" y="488" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="*" backgroundImage="blackbox2">
+                                <state key="normal" title="*" image="Numpad*">
                                     <color key="titleShadowColor" red="0.2956904541" green="0.31732728119999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -1094,9 +1196,9 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVl-bc-g89" customClass="Button" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="132" y="138" width="90" height="90"/>
+                                <rect key="frame" x="132" y="137" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="8" backgroundImage="Numpad8White">
+                                <state key="normal" backgroundImage="Numpad8White">
                                     <color key="titleShadowColor" red="0.2956904541" green="0.31732728119999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -1107,7 +1209,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87q-OB-R2Y" customClass="Button" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="246" y="138" width="90" height="90"/>
+                                <rect key="frame" x="246" y="137" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="9" backgroundImage="Numpad9White">
                                     <color key="titleShadowColor" red="0.2956904541" green="0.31732728119999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1117,26 +1219,43 @@
                                     <userDefinedRuntimeAttribute type="size" keyPath="labelSize">
                                         <size key="value" width="0.0" height="26"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="9"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="al4-py-aeE" customClass="Button" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="246" y="20" width="90" height="90"/>
+                                <rect key="frame" x="246" y="19" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Backspace" backgroundImage="blackbox2">
+                                <state key="normal" title="Backspace" image="NumpadBackspace">
                                     <color key="titleShadowColor" red="0.2956904541" green="0.31732728119999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Key Press Cancel"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Cancel"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Key Press Backspace"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Backspace"/>
                                     <userDefinedRuntimeAttribute type="size" keyPath="labelSize">
                                         <size key="value" width="26" height="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHV-qI-5Re" customClass="Button" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="20" y="254" width="90" height="90"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DZW-hh-fRR" customClass="Button" customModule="Linked">
+                                <rect key="frame" x="228" y="589" width="136" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="4" backgroundImage="Numpad4White">
+                                <state key="normal" title="Close" image="NumpadClose">
+                                    <color key="titleShadowColor" red="0.2956904541" green="0.31732728119999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Menu"/>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="labelSize">
+                                        <size key="value" width="26" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="N5E-vl-X75" kind="show" id="4dE-jl-zZx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHV-qI-5Re" customClass="Button" customModule="Linked" customModuleProvider="target">
+                                <rect key="frame" x="20" y="253" width="90" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="Numpad4White">
                                     <color key="titleShadowColor" red="0.2956904541" green="0.31732728119999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -1147,9 +1266,9 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ub-n4-h9z" customClass="Button" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="132" y="254" width="90" height="90"/>
+                                <rect key="frame" x="132" y="253" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="5" backgroundImage="Numpad5White">
+                                <state key="normal" backgroundImage="Numpad5White">
                                     <color key="titleShadowColor" red="0.2956904541" green="0.31732728119999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -1160,9 +1279,9 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AcE-hC-9vd" customClass="Button" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="246" y="254" width="90" height="90"/>
+                                <rect key="frame" x="246" y="253" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="6" backgroundImage="Numpad6White">
+                                <state key="normal" backgroundImage="Numpad6White">
                                     <color key="titleShadowColor" red="0.2956904541" green="0.31732728119999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -1173,9 +1292,9 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFv-8B-wz6" customClass="Button" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="20" y="376" width="90" height="90"/>
+                                <rect key="frame" x="20" y="375" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="1" backgroundImage="Numpad1White">
+                                <state key="normal" backgroundImage="Numpad1White">
                                     <color key="titleShadowColor" red="0.2956904541" green="0.31732728119999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -1183,12 +1302,13 @@
                                     <userDefinedRuntimeAttribute type="size" keyPath="labelSize">
                                         <size key="value" width="0.0" height="26"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="1"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r19-EF-qh1" customClass="Button" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="132" y="376" width="90" height="90"/>
+                                <rect key="frame" x="132" y="375" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="2" backgroundImage="Numpad2White">
+                                <state key="normal" backgroundImage="Numpad2White">
                                     <color key="titleShadowColor" red="0.2956904541" green="0.31732728119999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -1199,9 +1319,9 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egh-XU-SH1" customClass="Button" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="246" y="376" width="90" height="90"/>
+                                <rect key="frame" x="246" y="375" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="3" backgroundImage="Numpad3White">
+                                <state key="normal" backgroundImage="Numpad3White">
                                     <color key="titleShadowColor" red="0.2956904541" green="0.31732728119999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -1212,39 +1332,39 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uKf-JP-lLq" customClass="Button" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="132" y="492" width="90" height="90"/>
+                                <rect key="frame" x="132" y="491" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="0" backgroundImage="Numpad0White">
+                                <state key="normal" backgroundImage="Numpad0White">
                                     <color key="titleShadowColor" red="0.2956904541" green="0.31732728119999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Key Press 0"/>
                                     <userDefinedRuntimeAttribute type="size" keyPath="labelSize">
                                         <size key="value" width="0.0" height="26"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Key Press 0"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aru-wr-Stp" customClass="Button" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="246" y="492" width="90" height="90"/>
+                                <rect key="frame" x="246" y="488" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="@" backgroundImage="blackbox2">
+                                <state key="normal" title="#" image="Numpad#">
                                     <color key="titleShadowColor" red="0.2956904541" green="0.31732728119999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Key Press @"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="@"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Key Press #"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="#"/>
                                     <userDefinedRuntimeAttribute type="size" keyPath="labelSize">
                                         <size key="value" width="26" height="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.03579191118478775" green="0.074556224048137665" blue="0.044080756604671478" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sc8-Hc-KQE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3730" y="-1480"/>
+            <point key="canvasLocation" x="-6002" y="267"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="RHK-Aa-8RT">
@@ -1278,12 +1398,15 @@
         <image name="Home_Arrows-Up" width="946" height="946"/>
         <image name="Hub_Camera" width="642" height="642"/>
         <image name="Hub_Display" width="642" height="642"/>
-        <image name="Hub_Home" width="545" height="545"/>
+        <image name="Hub_Home" width="66" height="66"/>
         <image name="Hub_Menu" width="642" height="642"/>
         <image name="Hub_Numpad" width="318" height="422"/>
         <image name="Hub_Volume" width="642" height="642"/>
-        <image name="Hub_info" width="552" height="552"/>
+        <image name="Hub_info" width="133" height="134"/>
+        <image name="LeftOff" width="113" height="113"/>
         <image name="Mic" width="113" height="113"/>
+        <image name="Numpad#" width="96" height="96"/>
+        <image name="Numpad*" width="96" height="96"/>
         <image name="Numpad0White" width="417" height="417"/>
         <image name="Numpad1White" width="417" height="417"/>
         <image name="Numpad2White" width="417" height="417"/>
@@ -1294,17 +1417,19 @@
         <image name="Numpad7White" width="417" height="417"/>
         <image name="Numpad8White" width="417" height="417"/>
         <image name="Numpad9White" width="417" height="417"/>
+        <image name="NumpadBackspace" width="96" height="96"/>
+        <image name="NumpadClose" width="423" height="227"/>
         <image name="Power_Icon_0000" width="163" height="167"/>
+        <image name="Projectors On" width="113" height="113"/>
         <image name="RejectCall" width="113" height="113"/>
+        <image name="RightOff" width="113" height="113"/>
+        <image name="SystemOff" width="113" height="113"/>
         <image name="VolumeDown" width="113" height="113"/>
         <image name="VolumeUp" width="113" height="113"/>
         <image name="apple_tv" width="113" height="113"/>
-        <image name="apply" width="113" height="113"/>
-        <image name="blackbox2" width="853" height="533"/>
         <image name="camera_presets" width="113" height="113"/>
         <image name="changeLayout" width="113" height="113"/>
         <image name="class" width="113" height="113"/>
-        <image name="color-blue-2" width="853" height="533"/>
         <image name="conference" width="113" height="113"/>
         <image name="f1_icon" width="638" height="638"/>
         <image name="f2_icon" width="638" height="638"/>
@@ -1323,4 +1448,8 @@
         <image name="right_projector" width="113" height="113"/>
         <image name="zoom" width="112" height="38"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="4dE-jl-zZx"/>
+        <segue reference="Iaz-Wk-u9C"/>
+    </inferredMetricsTieBreakers>
 </document>

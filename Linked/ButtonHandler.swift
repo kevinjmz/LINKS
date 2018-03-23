@@ -49,18 +49,69 @@ class ButtonHandler: NSObject  {
     
     @IBOutlet weak var VCMode: Button!
     
+    @IBOutlet weak var MainComputer_left: Button!
+    
+    @IBOutlet weak var Laptop_left: Button!
+    
+    @IBOutlet weak var AppleTV_left: Button!
+    
+    
+    @IBOutlet weak var MainComputer_right: Button!
+    
+    @IBOutlet weak var Laptop_right: Button!
+    
+    @IBOutlet weak var AppleTV_right: Button!
+    
+    var leftIsEnabled = false;
+    var rightIsEnabled = false;
+    
+    
+    
+    
+    
     @IBAction public func classroomModeTapped (_ sender: Button){
-        VCMode.isEnabled = true
+        //VCMode.isEnabled = true
         ClassroomMode.isEnabled = false
         SourcePC.isEnabled = false
         CameraPreset.isEnabled = false
     }
     
     @IBAction public func VCModeTapped (_ sender:Button){
-        VCMode.isEnabled = false
+        //VCMode.isEnabled = false
         ClassroomMode.isEnabled = true
         SourcePC.isEnabled = true
         CameraPreset.isEnabled = true
+    }
+    
+    @IBAction public func LeftProjectorTapped (_ sender:Button){
+        if(leftIsEnabled == false){
+        //display corresponding buttons
+        MainComputer_left.isHidden = false
+        Laptop_left.isHidden = false
+        AppleTV_left.isHidden = false
+            leftIsEnabled = true
+        }
+        else{
+            MainComputer_left.isHidden = true
+            Laptop_left.isHidden = true
+            AppleTV_left.isHidden = true
+            leftIsEnabled = false
+        }
+    }
+    @IBAction public func RightProjectorTapped (_ sender:Button){
+        if(rightIsEnabled == false){
+            //display corresponding buttons
+            MainComputer_right.isHidden = false
+            Laptop_right.isHidden = false
+            AppleTV_right.isHidden = false
+            rightIsEnabled = true
+        }
+        else{
+            MainComputer_right.isHidden = true
+            Laptop_right.isHidden = true
+            AppleTV_right.isHidden = true
+            rightIsEnabled = false
+        }
     }
     
     /**Sends waci command with given string*/
