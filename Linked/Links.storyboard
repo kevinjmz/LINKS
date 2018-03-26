@@ -24,9 +24,12 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6w-Or-bvO" customClass="Button" customModule="Linked" customModuleProvider="target">
                                 <rect key="frame" x="14" y="593" width="164" height="164"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="ON" backgroundImage="Power_Icon_0000"/>
+                                <state key="normal" backgroundImage="Power_Icon_0000"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="System_ON"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="kIP-2W-SX9" eventType="touchUpInside" id="vWw-ay-bCg"/>
@@ -71,6 +74,9 @@
                                         <point key="value" x="570" y="300"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Camera"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="displayContainer:" destination="N5E-vl-X75" eventType="touchUpInside" id="XJ0-8I-Ewg"/>
@@ -88,6 +94,9 @@
                                         <point key="value" x="570" y="300"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Camera_min"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="displayContainer:" destination="N5E-vl-X75" eventType="touchUpInside" id="QdM-5a-EB5"/>
@@ -109,6 +118,9 @@
                                         <point key="value" x="700" y="330"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Volume"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="displayContainer:" destination="N5E-vl-X75" eventType="touchUpInside" id="Fkk-FO-PQC"/>
@@ -126,6 +138,9 @@
                                         <point key="value" x="700" y="330"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Volume_min"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="displayContainer:" destination="N5E-vl-X75" eventType="touchUpInside" id="c0G-Xw-eKY"/>
@@ -149,6 +164,9 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="shiftUp">
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="displayContainer:" destination="N5E-vl-X75" eventType="touchUpInside" id="x8C-ow-dTc"/>
@@ -168,6 +186,9 @@
                                         <point key="value" x="650" y="400"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Input_min"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="displayContainer:" destination="N5E-vl-X75" eventType="touchUpInside" id="fBi-O9-Fsw"/>
@@ -216,7 +237,7 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Menu"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
-                                        <real key="value" value="100"/>
+                                        <real key="value" value="-20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -236,7 +257,7 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Menu_min"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
-                                        <real key="value" value="100"/>
+                                        <real key="value" value="-20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -258,6 +279,9 @@
                                         <point key="value" x="650" y="300"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Power"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="displayContainer:" destination="N5E-vl-X75" eventType="touchUpInside" id="nXQ-PX-7DD"/>
@@ -281,6 +305,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Help_btn"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="viewToDisplay" value="Help"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="helpButtonTapped:" destination="N5E-vl-X75" eventType="touchUpInside" id="v8W-Qi-pep"/>
@@ -334,21 +361,26 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="shiftUp">
                                         <integer key="value" value="-100"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="LeftProjectorTapped:" destination="HOY-he-I80" eventType="touchUpInside" id="WNf-BT-qb6"/>
                                     <action selector="changeSelectState:" destination="HOY-he-I80" eventType="touchUpInside" id="Rcf-Ue-KFv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdG-Tp-mB2" customClass="Button" customModule="Linked" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="vdG-Tp-mB2" customClass="Button" customModule="Linked" customModuleProvider="target">
                                 <rect key="frame" x="294" y="243" width="114" height="114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Right Projector" backgroundImage="right_projector">
                                     <color key="titleShadowColor" red="0.25600946130000002" green="0.2420130818" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="2"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Right Projector"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-40"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="RightProjectorTapped:" destination="HOY-he-I80" eventType="touchUpInside" id="W7e-4a-kGL"/>
@@ -364,37 +396,49 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_AppleTvRight"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Apple TV"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="changeSelectState:" destination="HOY-he-I80" eventType="touchUpInside" id="gwi-Ko-rZg"/>
+                                    <action selector="sendWaciCommand:" destination="HOY-he-I80" eventType="touchUpInside" id="pmF-Wd-p9T"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSj-Nn-fIS" customClass="Button" customModule="Linked" customModuleProvider="target">
                                 <rect key="frame" x="-11" y="167" width="114" height="114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Main Computer" backgroundImage="main_computer">
+                                <state key="normal" title="Computer" backgroundImage="main_computer">
                                     <color key="titleShadowColor" red="0.25600946130000002" green="0.2420130818" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_MainComputerLeft"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Main Computer"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="buttonSingleSelect:" destination="HOY-he-I80" eventType="touchUpInside" id="erx-G8-iGm"/>
+                                    <action selector="sendWaciCommand:" destination="HOY-he-I80" eventType="touchUpInside" id="jO3-cl-ve4"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPN-6z-s8E" customClass="Button" customModule="Linked" customModuleProvider="target">
                                 <rect key="frame" x="402" y="167" width="114" height="114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Main Computer" backgroundImage="main_computer">
+                                <state key="normal" title="Computer" backgroundImage="main_computer">
                                     <color key="titleShadowColor" red="0.25600946130000002" green="0.2420130818" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_MainComputerRight"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Main Computer"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="buttonSingleSelect:" destination="HOY-he-I80" eventType="touchUpInside" id="SwF-b7-yGJ"/>
+                                    <action selector="sendWaciCommand:" destination="HOY-he-I80" eventType="touchUpInside" id="6kK-IB-hEK"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXR-By-nMm" customClass="Button" customModule="Linked" customModuleProvider="target">
@@ -406,9 +450,13 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_LaptopLeft"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Laptop"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="buttonSingleSelect:" destination="HOY-he-I80" eventType="touchUpInside" id="JxS-9d-wC6"/>
+                                    <action selector="sendWaciCommand:" destination="HOY-he-I80" eventType="touchUpInside" id="cU9-6O-HFj"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ITe-VG-eBN" customClass="Button" customModule="Linked" customModuleProvider="target">
@@ -420,23 +468,24 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_LaptopRight"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Laptop"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="buttonSingleSelect:" destination="HOY-he-I80" eventType="touchUpInside" id="tMx-6O-mme"/>
+                                    <action selector="sendWaciCommand:" destination="HOY-he-I80" eventType="touchUpInside" id="xEF-wq-pOi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ZhY-ba-5Fk" customClass="Button" customModule="Linked" customModuleProvider="target">
                                 <rect key="frame" x="293" y="6" width="114" height="114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Classroom Mode" backgroundImage="class">
+                                <state key="normal" title="Class Mode" backgroundImage="class">
                                     <color key="titleShadowColor" red="0.2956904541" green="0.31732728119999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="Mode CR"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Classroom Mode"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
-                                        <real key="value" value="300"/>
-                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="classroomModeTapped:" destination="HOY-he-I80" eventType="touchUpInside" id="g4B-7I-lf3"/>
@@ -444,14 +493,17 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPP-pe-Fx1" customClass="Button" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="432" y="574" width="228" height="113"/>
+                                <rect key="frame" x="432" y="574" width="114" height="114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Camera Preset" image="camera_presets">
+                                <state key="normal" title="Camera Preset" backgroundImage="camera_presets">
                                     <color key="titleShadowColor" red="0.25600946130000002" green="0.2420130818" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_MainCam"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Camera"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="HOY-he-I80" eventType="touchUpInside" id="Zuz-Jg-9tV"/>
@@ -460,15 +512,12 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="3HL-sW-jfM" customClass="Button" customModule="Linked" customModuleProvider="target">
                                 <rect key="frame" x="34" y="6" width="114" height="114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Video Conference Mode" backgroundImage="conference">
+                                <state key="normal" title="VC Mode" backgroundImage="conference">
                                     <color key="titleShadowColor" red="0.2956904541" green="0.31732728119999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="Mode VC"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Video Conference"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
-                                        <integer key="value" value="200"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shiftUp">
                                         <integer key="value" value="100"/>
                                     </userDefinedRuntimeAttribute>
@@ -485,14 +534,17 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="od4-Td-2rc" customClass="Button" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="174" y="574" width="222" height="113"/>
+                                <rect key="frame" x="186" y="574" width="114" height="114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Source PC" image="pc_presets">
+                                <state key="normal" title="Source PC" backgroundImage="pc_presets">
                                     <color key="titleShadowColor" red="0.2956904541" green="0.31732728119999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Source PC"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="My PC"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="HOY-he-I80" eventType="touchUpInside" id="FT9-ZB-nHu"/>
@@ -507,9 +559,13 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_AppleTvLeft"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Apple TV"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="changeSelectState:" destination="HOY-he-I80" eventType="touchUpInside" id="g5o-g6-AYI"/>
+                                    <action selector="sendWaciCommand:" destination="HOY-he-I80" eventType="touchUpInside" id="HCk-LM-pk3"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -562,6 +618,9 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Key Press F1"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="Gz4-sv-KE4" eventType="touchUpInside" id="EMl-fW-rmZ"/>
@@ -576,6 +635,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Key Press F2"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value=" "/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="Gz4-sv-KE4" eventType="touchUpInside" id="sdQ-It-pHP"/>
@@ -590,6 +652,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Key Press F3"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value=" "/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="Gz4-sv-KE4" eventType="touchUpInside" id="Lle-m7-o9p"/>
@@ -604,6 +669,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Key Press F4"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value=" "/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="Gz4-sv-KE4" eventType="touchUpInside" id="ZyI-jf-Cyy"/>
@@ -618,6 +686,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Key Press F5"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value=" "/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="Gz4-sv-KE4" eventType="touchUpInside" id="0GB-VS-oR7"/>
@@ -632,6 +703,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Key Press Down"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommandReleased" value="TAND_Key Press Down Release"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="Gz4-sv-KE4" eventType="touchDown" id="pSx-Hk-C2U"/>
@@ -641,12 +715,15 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RqB-6A-Luj" customClass="Button" customModule="Linked" customModuleProvider="target">
                                 <rect key="frame" x="198" y="103" width="129" height="129"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Up" image="Home_Arrows-Up">
+                                <state key="normal" title="Up" backgroundImage="Home_Arrows-Up">
                                     <color key="titleShadowColor" red="0.25600946130000002" green="0.2420130818" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Key Press Up"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommandReleased" value="TAND_Key Press Up Release"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="Gz4-sv-KE4" eventType="touchDown" id="cXo-vg-tHp"/>
@@ -663,6 +740,9 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Key Press Left"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommandReleased" value="TAND_Key Press Left Release"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="L"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="Gz4-sv-KE4" eventType="touchDown" id="Jjv-Vq-6BD"/>
@@ -681,6 +761,9 @@
                                     <userDefinedRuntimeAttribute type="size" keyPath="labelSize">
                                         <size key="value" width="0.0" height="0.0"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="Gz4-sv-KE4" eventType="touchUpInside" id="L3B-wa-BTJ"/>
@@ -698,6 +781,9 @@
                                     <userDefinedRuntimeAttribute type="size" keyPath="labelSize">
                                         <size key="value" width="0.0" height="0.0"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="Gz4-sv-KE4" eventType="touchUpInside" id="w0x-br-nDV"/>
@@ -712,6 +798,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Key Press Right"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommandReleased" value="TAND_Key Press Right Release"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="Gz4-sv-KE4" eventType="touchDown" id="UVB-gH-afa"/>
@@ -726,6 +815,9 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Key Press OK"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="Gz4-sv-KE4" eventType="touchUpInside" id="DWX-vX-aOE"/>
@@ -742,6 +834,9 @@
                                         <point key="value" x="647" y="350"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="NumPad_btn"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="displayContainer:" destination="N5E-vl-X75" eventType="touchUpInside" id="ZZh-if-epd"/>
@@ -762,6 +857,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="VC Menu"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Key Press Menu"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="Gz4-sv-KE4" eventType="touchUpInside" id="Oa5-E6-qgi"/>
@@ -770,13 +868,16 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="lpd-lb-pAO" customClass="Button" customModule="Linked" customModuleProvider="target">
                                 <rect key="frame" x="691" y="523" width="85" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Change        layout" backgroundImage="changeLayout">
+                                <state key="normal" title="Layout" backgroundImage="changeLayout">
                                     <color key="titleShadowColor" red="0.2956904541" green="0.31732728119999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Layout"/>
                                     <userDefinedRuntimeAttribute type="size" keyPath="labelSize">
                                         <size key="value" width="90" height="55"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -794,6 +895,9 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Phonebook"/>
                                     <userDefinedRuntimeAttribute type="size" keyPath="labelSize">
                                         <size key="value" width="90" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -834,6 +938,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Cam Pan Left"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Left"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="CMu-K0-Eg8" eventType="touchDown" id="hrB-mX-bTJ"/>
@@ -850,6 +957,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Cam UP"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Up"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="CMu-K0-Eg8" eventType="touchDown" id="V5E-b7-seK"/>
@@ -866,6 +976,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Cam Down"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Down"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="CMu-K0-Eg8" eventType="touchDown" id="L3y-5u-REW"/>
@@ -882,6 +995,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Cam Pan Right"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Right"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="CMu-K0-Eg8" eventType="touchDown" id="SQD-Nr-CDE"/>
@@ -902,6 +1018,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Zoom out"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommandReleased" value="TAND_Cam Zoom Out Release"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="CMu-K0-Eg8" eventType="touchDown" id="HX4-NB-fbo"/>
@@ -919,6 +1038,9 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Cam Zoom In"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Zoom in"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommandReleased" value="TAND_Cam Zoom In Release"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="CMu-K0-Eg8" eventType="touchDown" id="VOj-Fm-iFc"/>
@@ -938,8 +1060,14 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="VC  Menu"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Key Press OK"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Key Press Menu"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sendWaciCommand:" destination="CMu-K0-Eg8" eventType="touchUpInside" id="ESq-S5-T7B"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Clb-fz-HOt" customClass="Button" customModule="Linked" customModuleProvider="target">
                                 <rect key="frame" x="201" y="600" width="76" height="76"/>
@@ -950,6 +1078,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Key Press F2"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value=" F2"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="CMu-K0-Eg8" eventType="touchUpInside" id="RcP-rL-eef"/>
@@ -964,6 +1095,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Key Press F3"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value=" F3"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="CMu-K0-Eg8" eventType="touchUpInside" id="uLB-rG-qie"/>
@@ -978,6 +1112,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Key Press F4"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value=" F4"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="CMu-K0-Eg8" eventType="touchUpInside" id="tBX-oD-JJF"/>
@@ -992,6 +1129,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Key Press F5"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value=" F5"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="CMu-K0-Eg8" eventType="touchUpInside" id="URS-fb-fRS"/>
@@ -1005,6 +1145,9 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Key Press F1"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="CMu-K0-Eg8" eventType="touchUpInside" id="mDf-XL-tYO"/>
@@ -1041,6 +1184,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="Projector Left Off"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Left Projector off"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="pKX-cD-FuD" eventType="touchUpInside" id="PBZ-rg-tB7"/>
@@ -1053,6 +1199,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="System_OFF"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="System Off"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="pKX-cD-FuD" eventType="touchUpInside" id="MMK-mD-0n0"/>
@@ -1065,6 +1214,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="Projector Right Off"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Right Projector off"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="pKX-cD-FuD" eventType="touchUpInside" id="vgo-OS-Poi"/>
@@ -1077,6 +1229,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="System_ON"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Both Projectors On"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="pKX-cD-FuD" eventType="touchUpInside" id="r18-Pg-wz6"/>
@@ -1103,42 +1258,51 @@
                         <viewControllerLayoutGuide type="bottom" id="W45-y3-q4m"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="aUi-TN-bVD" customClass="TransparentView" customModule="Linked" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="652" height="284"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s5f-Nb-tME" customClass="Button" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="90" y="-14" width="199" height="133"/>
+                                <rect key="frame" x="92" y="-2" width="113" height="113"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Volume up" image="VolumeUp"/>
+                                <state key="normal" title="Volume up" backgroundImage="VolumeUp"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Vol UP"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Volume Up"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommandReleased" value="TAND_Vol UP Release"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="kI1-0G-9gF" eventType="touchUpInside" id="mbe-hW-eWX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXz-Xf-UTp" customClass="Button" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="90" y="200" width="223" height="133"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="TXz-Xf-UTp" customClass="Button" customModule="Linked" customModuleProvider="target">
+                                <rect key="frame" x="92" y="210" width="113" height="113"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Volume down" image="VolumeDown"/>
+                                <state key="normal" title="Volume down" backgroundImage="VolumeDown"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Vol Down"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Volume Down"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommandReleased" value="TAND_Vol Down Release"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="kI1-0G-9gF" eventType="touchUpInside" id="gds-er-cwk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPF-zV-cDJ" customClass="Button" customModule="Linked" customModuleProvider="target">
-                                <rect key="frame" x="228" y="328" width="256" height="113"/>
+                                <rect key="frame" x="235" y="328" width="113" height="113"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Mute microphone" image="Mic"/>
+                                <state key="normal" title="Mute mic" backgroundImage="Mic"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Mute Mic"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Mute Microphone"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendWaciCommand:" destination="kI1-0G-9gF" eventType="touchUpInside" id="D1e-e9-eDj"/>
@@ -1156,7 +1320,7 @@
             </objects>
             <point key="canvasLocation" x="-5966" y="-686"/>
         </scene>
-        <!--Numpad-->
+        <!--NumpadC-->
         <scene sceneID="Xr7-ew-6MJ">
             <objects>
                 <viewController title="Numpad" id="ca5-lv-NQO" customClass="LinksContainer" customModule="Linked" customModuleProvider="target" sceneMemberID="viewController">
@@ -1179,7 +1343,13 @@
                                     <userDefinedRuntimeAttribute type="size" keyPath="labelSize">
                                         <size key="value" width="26" height="0.0"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sendWaciCommand:" destination="c4X-v3-YYk" eventType="touchUpInside" id="XaN-UF-8Lh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibD-Ge-coW" customClass="Button">
                                 <rect key="frame" x="20" y="488" width="90" height="90"/>
@@ -1193,7 +1363,13 @@
                                     <userDefinedRuntimeAttribute type="size" keyPath="labelSize">
                                         <size key="value" width="26" height="0.0"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sendWaciCommand:" destination="c4X-v3-YYk" eventType="touchUpInside" id="od0-Pf-9qA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVl-bc-g89" customClass="Button" customModule="Linked" customModuleProvider="target">
                                 <rect key="frame" x="132" y="137" width="90" height="90"/>
@@ -1206,12 +1382,18 @@
                                     <userDefinedRuntimeAttribute type="size" keyPath="labelSize">
                                         <size key="value" width="0.0" height="26"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sendWaciCommand:" destination="c4X-v3-YYk" eventType="touchUpInside" id="k4S-9q-aoM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87q-OB-R2Y" customClass="Button" customModule="Linked" customModuleProvider="target">
                                 <rect key="frame" x="246" y="137" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="9" backgroundImage="Numpad9White">
+                                <state key="normal" backgroundImage="Numpad9White">
                                     <color key="titleShadowColor" red="0.2956904541" green="0.31732728119999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -1219,22 +1401,33 @@
                                     <userDefinedRuntimeAttribute type="size" keyPath="labelSize">
                                         <size key="value" width="0.0" height="26"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="9"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sendWaciCommand:" destination="c4X-v3-YYk" eventType="touchUpInside" id="7LM-Gw-YO2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="al4-py-aeE" customClass="Button" customModule="Linked" customModuleProvider="target">
                                 <rect key="frame" x="246" y="19" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Backspace" image="NumpadBackspace">
+                                <state key="normal" title="delete" image="NumpadBackspace">
                                     <color key="titleShadowColor" red="0.2956904541" green="0.31732728119999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Key Press Backspace"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="Backspace"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="delete"/>
                                     <userDefinedRuntimeAttribute type="size" keyPath="labelSize">
                                         <size key="value" width="26" height="0.0"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sendWaciCommand:" destination="c4X-v3-YYk" eventType="touchUpInside" id="zDG-Bp-qGd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DZW-hh-fRR" customClass="Button" customModule="Linked">
                                 <rect key="frame" x="228" y="589" width="136" height="65"/>
@@ -1247,9 +1440,12 @@
                                     <userDefinedRuntimeAttribute type="size" keyPath="labelSize">
                                         <size key="value" width="26" height="0.0"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="N5E-vl-X75" kind="show" id="4dE-jl-zZx"/>
+                                    <action selector="CloseBtnTapped:" destination="c4X-v3-YYk" eventType="touchUpInside" id="NFu-ox-LJl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHV-qI-5Re" customClass="Button" customModule="Linked" customModuleProvider="target">
@@ -1263,7 +1459,13 @@
                                     <userDefinedRuntimeAttribute type="size" keyPath="labelSize">
                                         <size key="value" width="0.0" height="26"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sendWaciCommand:" destination="c4X-v3-YYk" eventType="touchUpInside" id="ZPl-Gx-tiq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ub-n4-h9z" customClass="Button" customModule="Linked" customModuleProvider="target">
                                 <rect key="frame" x="132" y="253" width="90" height="90"/>
@@ -1276,7 +1478,13 @@
                                     <userDefinedRuntimeAttribute type="size" keyPath="labelSize">
                                         <size key="value" width="0.0" height="26"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sendWaciCommand:" destination="c4X-v3-YYk" eventType="touchUpInside" id="9GY-Yk-m8r"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AcE-hC-9vd" customClass="Button" customModule="Linked" customModuleProvider="target">
                                 <rect key="frame" x="246" y="253" width="90" height="90"/>
@@ -1289,7 +1497,13 @@
                                     <userDefinedRuntimeAttribute type="size" keyPath="labelSize">
                                         <size key="value" width="0.0" height="26"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sendWaciCommand:" destination="c4X-v3-YYk" eventType="touchUpInside" id="F8G-5K-eFo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFv-8B-wz6" customClass="Button" customModule="Linked" customModuleProvider="target">
                                 <rect key="frame" x="20" y="375" width="90" height="90"/>
@@ -1303,7 +1517,13 @@
                                         <size key="value" width="0.0" height="26"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonLabel" value="1"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sendWaciCommand:" destination="c4X-v3-YYk" eventType="touchUpInside" id="KfR-bR-m48"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r19-EF-qh1" customClass="Button" customModule="Linked" customModuleProvider="target">
                                 <rect key="frame" x="132" y="375" width="90" height="90"/>
@@ -1316,7 +1536,13 @@
                                     <userDefinedRuntimeAttribute type="size" keyPath="labelSize">
                                         <size key="value" width="0.0" height="26"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sendWaciCommand:" destination="c4X-v3-YYk" eventType="touchUpInside" id="8hc-2T-con"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egh-XU-SH1" customClass="Button" customModule="Linked" customModuleProvider="target">
                                 <rect key="frame" x="246" y="375" width="90" height="90"/>
@@ -1329,7 +1555,13 @@
                                     <userDefinedRuntimeAttribute type="size" keyPath="labelSize">
                                         <size key="value" width="0.0" height="26"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sendWaciCommand:" destination="c4X-v3-YYk" eventType="touchUpInside" id="8NH-sr-iCs"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uKf-JP-lLq" customClass="Button" customModule="Linked" customModuleProvider="target">
                                 <rect key="frame" x="132" y="491" width="90" height="90"/>
@@ -1342,7 +1574,13 @@
                                         <size key="value" width="0.0" height="26"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="waciCommand" value="TAND_Key Press 0"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sendWaciCommand:" destination="c4X-v3-YYk" eventType="touchUpInside" id="uXs-oe-JmY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aru-wr-Stp" customClass="Button" customModule="Linked" customModuleProvider="target">
                                 <rect key="frame" x="246" y="488" width="90" height="90"/>
@@ -1356,12 +1594,33 @@
                                     <userDefinedRuntimeAttribute type="size" keyPath="labelSize">
                                         <size key="value" width="26" height="0.0"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shiftDown">
+                                        <real key="value" value="-20"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sendWaciCommand:" destination="c4X-v3-YYk" eventType="touchUpInside" id="wQd-q0-FBf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.03579191118478775" green="0.074556224048137665" blue="0.044080756604671478" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
+                <customObject id="c4X-v3-YYk" customClass="ButtonHandler" customModule="Linked" customModuleProvider="target">
+                    <connections>
+                        <outlet property="AppleTV_left" destination="I0a-3t-ZbV" id="bhp-kw-YsH"/>
+                        <outlet property="AppleTV_right" destination="7aM-tN-MJY" id="vwZ-Ud-dOq"/>
+                        <outlet property="CameraPreset" destination="aPP-pe-Fx1" id="GlY-vR-m3i"/>
+                        <outlet property="ClassroomMode" destination="ZhY-ba-5Fk" id="FfR-mT-OQY"/>
+                        <outlet property="Laptop_left" destination="yXR-By-nMm" id="kSd-xp-g6Z"/>
+                        <outlet property="Laptop_right" destination="ITe-VG-eBN" id="yRh-bH-vwJ"/>
+                        <outlet property="MainComputer_left" destination="mSj-Nn-fIS" id="gUw-Pc-XuG"/>
+                        <outlet property="MainComputer_right" destination="dPN-6z-s8E" id="sOd-mj-aSt"/>
+                        <outlet property="SourcePC" destination="od4-Td-2rc" id="oHi-na-hN3"/>
+                        <outlet property="VCMode" destination="3HL-sW-jfM" id="JnB-Yr-NuA"/>
+                        <outlet property="numpadC" destination="ca5-lv-NQO" id="Sui-nq-pDT"/>
+                    </connections>
+                </customObject>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sc8-Hc-KQE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-6002" y="267"/>
@@ -1449,7 +1708,6 @@
         <image name="zoom" width="112" height="38"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4dE-jl-zZx"/>
         <segue reference="Iaz-Wk-u9C"/>
     </inferredMetricsTieBreakers>
 </document>

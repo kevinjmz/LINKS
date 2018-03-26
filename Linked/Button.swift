@@ -31,6 +31,8 @@ import UIKit
      Text position determined by the label width and height*/
     private var label: UILabel! = UILabel()
     
+    @IBInspectable var shiftDown: CGFloat! = -20
+    
     /**The button name that will be displayed, name will be displayed under the button using label: UILabel*/
     @IBInspectable var buttonLabel: String! = " " {
         didSet{label.text = buttonLabel}
@@ -92,6 +94,14 @@ import UIKit
         super.init(frame: frame)
     }
     
+    private func setButtonLabel (value: CGFloat){
+        //make the buttons content appear in the top-left
+        self.contentVerticalAlignment = .bottom
+        
+        //move text 10 pixels down and right
+        self.titleEdgeInsets = UIEdgeInsetsMake(0.0, 0.0, value, 0.0)  //left , up,
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         /**Hides original button title from showing up, the one that show up inside the button*/
@@ -101,6 +111,7 @@ import UIKit
         enableLabel(enable: false)
         self.addSubview(label)
         self.label.textAlignment = .center
+        setButtonLabel(value: shiftDown)
         
     }
 }

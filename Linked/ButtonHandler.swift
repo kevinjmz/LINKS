@@ -62,12 +62,15 @@ class ButtonHandler: NSObject  {
     
     @IBOutlet weak var AppleTV_right: Button!
     
+    @IBOutlet weak var numpadC: UIViewController!
+    
     var leftIsEnabled = false;
     var rightIsEnabled = false;
     
     
-    
-    
+    @IBAction public func CloseBtnTapped (_ sender: Button){
+        numpadC.dismiss(animated: true, completion: nil)
+    }
     
     @IBAction public func classroomModeTapped (_ sender: Button){
         //VCMode.isEnabled = true
