@@ -3,7 +3,7 @@
 //  Linked
 //
 //  Created by Gerardo Cervantes and Kevin Jimenez on 9/20/16- 01/28/2018.
-//  Copyright © 2016 Gerardo Cervantes. All rights reserved.
+//  Copyright © 2016 Gerardo Cervantes and Kevin Jimenez. All rights reserved.
 //
 
 import Foundation
@@ -40,7 +40,6 @@ class ButtonHandler: NSObject  {
         waci.sendWaciCommand(waciCommand: sender.waciCommandReleased)
     }
     
-    
     @IBOutlet weak var CameraPreset: Button!
 
     @IBOutlet weak var SourcePC: Button!
@@ -62,11 +61,33 @@ class ButtonHandler: NSObject  {
     
     @IBOutlet weak var AppleTV_right: Button!
     
+    @IBOutlet weak var TurnOff_right:Button!
+    @IBOutlet weak var TurnOn_right:Button!
+    @IBOutlet weak var TurnOff_left:Button!
+    @IBOutlet weak var TurnOn_left:Button!
+    
     @IBOutlet weak var numpadC: UIViewController!
     
     var leftIsEnabled = false;
     var rightIsEnabled = false;
     
+    @IBAction public func TurnOffRightTapped (_ sender:Button){
+        TurnOff_right.isHidden = true
+        TurnOn_right.isHidden = false
+    }
+    @IBAction public func TurnOffLeftTapped (_ sender:Button){
+        TurnOff_left.isHidden = true
+        TurnOn_left.isHidden = false
+    }
+    @IBAction public func TurnOnRightTapped(_ sender:Button){
+        TurnOff_right.isHidden = false
+        TurnOn_right.isHidden = true
+    }
+    
+    @IBAction public func TurnOnLeftTapped(_ sender:Button){
+        TurnOff_left.isHidden = false
+        TurnOn_left.isHidden = true
+    }
     
     @IBAction public func CloseBtnTapped (_ sender: Button){
         numpadC.dismiss(animated: true, completion: nil)
